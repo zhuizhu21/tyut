@@ -81,8 +81,4 @@ def login(username, pwd):
             }
         }
         print(newdict)
-#yhm=sys.argv[1]
-#mm=sys.argv[2]
-yhm="2015002028"
-mm='277538'
 login(yhm,mm)

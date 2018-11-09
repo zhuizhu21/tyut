@@ -1,12 +1,23 @@
 # -*- coding: UTF-8 -*-
 from django.http import HttpResponse as response
-from .get_name import get_random
 from .py import login
 from .py import score
 from .py import gpa
 from .py import kebiao
 from .py import notice
+import random
 import json
+
+def get_random():
+    ori = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+           'w', 'x', 'y', 'z'
+        ,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
+        , '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    res=""
+    for i in range(32):
+        res+=ori[random.randint(0,61)]
+    return res
+
 def Login(request):
     yhm=request.GET['yhm']
     mm=request.GET['mm']
