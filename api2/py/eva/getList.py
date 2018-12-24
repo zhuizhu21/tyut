@@ -31,7 +31,7 @@ def getEvaList(filename):
 
         html = session.get(url=url, headers=headers, cookies=cookie)
         # print(html.text)
-        bsObj = BeautifulSoup(html.content, 'lxml')
+        bsObj = BeautifulSoup(html.text, 'lxml')
         html2list=bsObj.find_all('img',{'title':'评估'})
         count=1
         for item in html2list:
